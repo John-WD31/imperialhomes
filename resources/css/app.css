@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap");
+@import "animate.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Readex Pro", sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white text-gray-700
+    w-72 min-h-[10rem] shadow-lg rounded-md overflow-hidden;
+  }
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs bg-gray-100;
+  }
+
+  .product-title {
+    @apply font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap;
+  }
+
+  .discount-percent {
+    @apply bg-green-400
+    px-1.5 py-0.5 rounded-md
+    text-xs text-white;
+  }
+
+  .button-primary {
+    @apply bg-gradient-to-r from-yellow-500 via-yellow-600 to-yellow-700 hover:opacity-90
+   px-6 py-2 rounded-md
+   text-white font-medium
+   tracking-wider transition;
+  }
+
+  .button-icon {
+    @apply flex-grow
+    flex justify-center items-center
+    bg-gray-200 hover:bg-yellow-600/80
+    transition rounded-md;
+  }
+
+  /* ==================agents=========== */
+  .card2 {
+    @apply bg-white text-gray-700
+    w-96 min-h-[10rem] shadow-lg rounded-md overflow-hidden;
+  }
+  .badge2 {
+    @apply text-gray-600/50 hover:text-yellow-800/80;
+  }
+
+  /* ==================js============ */
+
+  .hide {
+    opacity: 0;
+    filter: blur(3);
+    transition: all 1s;
+    scale: 0;
+  }
+
+  .hide:nth-child(1) {
+    transition-delay: 100ms;
+  }
+  .hide:nth-child(2) {
+    transition-delay: 200ms;
+  }
+  .hide:nth-child(3) {
+    transition-delay: 300ms;
+  }
+  .hide:nth-child(4) {
+    transition-delay: 400ms;
+  }
+  .hide:nth-child(5) {
+    transition-delay: 500ms;
+  }
+  .hide:nth-child(6) {
+    transition-delay: 6000ms;
+  }
+  .hide:nth-child(7) {
+    transition-delay: 700ms;
+  }
+  .hide:nth-child(8) {
+    transition-delay: 800ms;
+  }
+
+  .hideleft {
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(-200px);
+  }
+  .hideleft:nth-child(1) {
+    transition-delay: 500ms;
+  }
+  .hideleft:nth-child(2) {
+    transition-delay: 200ms;
+  }
+
+  .hideright {
+    opacity: 0;
+    transition: all 2s;
+    transform: translateX(200px);
+  }
+
+  .hideright:nth-child(4) {
+    transition-delay: 500ms;
+  }
+  .hideright:nth-child(3) {
+    transition-delay: 200ms;
+  }
+
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+    scale: 1;
+  }
+}
